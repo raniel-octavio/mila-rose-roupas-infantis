@@ -60,31 +60,31 @@ const COLLECTION_ITEMS = [
   },
   {
     title: "Acessórios",
-    image: "/images/conjunto.jpg",
+    image: "/images/modeloflor.png",
     objectPosition: "85% 12%",
   },
 ];
 
 const INSTAGRAM_IMAGES = [
   {
-    src: "/images/conjunto.jpg",
+    src: "/images/modelo.png",
     alt: "Conjunto delicado em tule",
     objectPosition: "center",
   },
   {
-    src: "/images/vestido-rosa.png",
+    src: "/images/modelovestidorosa.png",
     alt: "Detalhe em tule rosa",
-    objectPosition: "50% 22%",
+    objectPosition: "10% 5%",
   },
   {
-    src: "/images/vestido-vermelho.jpg",
+    src: "/images/modelovermelho.png",
     alt: "Vestido vermelho",
     objectPosition: "center",
   },
   {
-    src: "/images/conjunto.jpg",
+    src: "/images/modelobranco.png",
     alt: "Detalhe das flores em tule",
-    objectPosition: "50% 58%",
+    objectPosition: "50% 20%",
   },
 ];
 
@@ -111,9 +111,13 @@ export default function Home() {
             <CreditCard size={14} strokeWidth={1.5} />
             Parcele em até 6x sem juros
           </span>
-          <span className="flex items-center gap-2">
+          {/*<span className="flex items-center gap-2">
             <Tag size={14} strokeWidth={1.5} />
             5% OFF na primeira compra
+          </span>*/}
+          <span className="flex items-center gap-2">
+            <Tag size={14} strokeWidth={1.5} />
+            Feito sob medida para todas as ocasiões
           </span>
         </div>
       </div>
@@ -125,7 +129,10 @@ export default function Home() {
             <Link href="/" className="text-rose font-medium">
               Início
             </Link>
-            <Link href="/colecao" className="hover:text-rose transition">
+            <Link href="/orcamento" className="hover:text-rose transition">
+              Solicitar Orçamento
+            </Link>
+            {/*<Link href="/colecao" className="hover:text-rose transition">
               Coleção
             </Link>
             <Link href="/novidades" className="hover:text-rose transition">
@@ -133,7 +140,7 @@ export default function Home() {
             </Link>
             <Link href="/acessorios" className="hover:text-rose transition">
               Acessórios
-            </Link>
+            </Link>*/}
           </nav>
 
           <div className="text-center col-span-3 md:col-span-1 md:col-start-2">
@@ -146,7 +153,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="hidden md:flex gap-5 justify-end items-center col-start-3">
+          {/*<div className="hidden md:flex gap-5 justify-end items-center col-start-3">
             <button aria-label="Buscar" className="text-gray-600 hover:text-rose transition">
               <Search size={20} strokeWidth={1.5} />
             </button>
@@ -159,12 +166,12 @@ export default function Home() {
                 0
               </span>
             </button>
-          </div>
+          </div>*/}
         </div>
       </header>
 
       {/* Hero Carousel */}
-      <section className="relative h-[480px] md:h-[560px] lg:h-[620px] overflow-hidden">
+      <section className="relative h-[480px] md:h-[540px] lg:h-[500px] overflow-hidden">
         {HERO_SLIDES.map((slide, index) => (
           <div
             key={slide.image}
@@ -183,7 +190,7 @@ export default function Home() {
           </div>
         ))}
 
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/45 to-transparent" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
           <div className="max-w-xl">
@@ -209,7 +216,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap gap-3 mt-8">
-              <Link
+              {/*<Link
                 href="/colecao"
                 className="bg-rose hover:bg-rose-dark transition text-white text-xs tracking-wider uppercase px-7 py-3.5 rounded-full flex items-center gap-2 font-medium"
               >
@@ -221,7 +228,7 @@ export default function Home() {
                 className="border border-rose text-rose hover:bg-rose-light transition text-xs tracking-wider uppercase px-7 py-3.5 rounded-full font-medium"
               >
                 Novidades
-              </Link>
+              </Link>*/}
             </div>
           </div>
         </div>
@@ -298,20 +305,20 @@ export default function Home() {
               Nossa Coleção
             </h2>
           </div>
-          <Link
+          {/*<Link
             href="/colecao"
             className="border border-rose text-rose hover:bg-rose-light transition text-xs tracking-wider uppercase px-6 py-3 rounded-full flex items-center gap-2 font-medium shrink-0"
           >
             Ver toda coleção
             <ArrowRight size={14} />
-          </Link>
+          </Link>*/}
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {COLLECTION_ITEMS.map((item) => (
-            <Link
+             <div
               key={item.title}
-              href="/colecao"
+             //href="/colecao"
               className="group relative overflow-hidden rounded-xl aspect-[3/4]"
             >
               <Image
@@ -324,11 +331,11 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
               <div className="absolute bottom-0 inset-x-0 pb-6 text-center text-white">
                 <h3 className="text-xl md:text-2xl font-serif">{item.title}</h3>
-                <span className="text-[10px] md:text-xs tracking-wider uppercase mt-1 inline-block opacity-90">
+                {/*<span className="text-[10px] md:text-xs tracking-wider uppercase mt-1 inline-block opacity-90">
                   Ver mais →
-                </span>
+                </span>*/}
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
@@ -338,9 +345,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-[35%_65%] gap-10 lg:gap-12 items-center">
             <div>
-              <span className="uppercase text-rose tracking-[3px] text-xs font-medium">
+              {/*<span className="uppercase text-rose tracking-[3px] text-xs font-medium">
                 Siga nosso Instagram
-              </span>
+              </span>*/}
               <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-serif mt-3 text-gray-800 leading-tight">
                 Inspirações que{" "}
                 <span className="font-script text-rose text-4xl md:text-5xl">
@@ -348,17 +355,19 @@ export default function Home() {
                 </span>
               </h2>
               <p className="mt-5 text-gray-500 text-sm leading-relaxed max-w-sm">
-                Looks, novidades e momentos especiais compartilhados
-                diariamente no nosso perfil.
+                Criando momentos especiais.
               </p>
-              <a
+              <p className="text-gray-500 text-sm leading-relaxed max-w-sm">
+                Vestidos desenvolvidos com carinho, qualidade e atenção aos detalhes para tornar cada ocasião inesquecível.
+              </p>
+             {/* <a
                 href="https://instagram.com/milaerose.oficial"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-7 bg-rose hover:bg-rose-dark transition text-white text-xs tracking-wider uppercase px-7 py-3.5 rounded-full font-medium"
               >
                 @milaerose.oficial
-              </a>
+              </a>*/}
             </div>
 
             <div className="grid grid-cols-4 gap-3 md:gap-4">
@@ -431,7 +440,14 @@ export default function Home() {
                 <Heart size={8} fill="currentColor" />
               </p>
             </div>
-
+            <div>
+              <li>
+                  <Link href="/sobre" className="hover:opacity-100 opacity-90 transition">
+                    Sobre Nós
+                  </Link>
+                </li>
+          </div>
+            {/*
             <div>
               <h4 className="text-xs tracking-[2px] uppercase font-semibold mb-4">
                 Institucional
@@ -454,7 +470,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-
+            
             <div>
               <h4 className="text-xs tracking-[2px] uppercase font-semibold mb-4">
                 Ajuda
@@ -476,7 +492,7 @@ export default function Home() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div>*/}
 
             <div>
               <h4 className="text-xs tracking-[2px] uppercase font-semibold mb-2">
@@ -500,12 +516,13 @@ export default function Home() {
               </div>
             </div>
           </div>
+          
 
           <div className="border-t border-white/20 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-xs opacity-80">
               © 2026 Mila & Rose. Todos os direitos reservados.
             </p>
-            <div className="flex gap-5">
+            {/*<div className="flex gap-5">
               <a
                 href="https://instagram.com/milaerose.oficial"
                 target="_blank"
@@ -527,7 +544,7 @@ export default function Home() {
                   <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
                 </svg>
               </a>
-            </div>
+            </div>*/}
           </div>
         </div>
       </footer>
