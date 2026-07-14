@@ -21,9 +21,9 @@ import {
 
 const HERO_SLIDES = [
   {
-    image: "/images/conjunto.jpg",
+    image: "/images/vestidobranco.png",
     alt: "Conjunto em tule com flores",
-    objectPosition: "center",
+    objectPosition: "20% 50%",
   },
   {
     image: "/images/vestido-rosa.png",
@@ -31,7 +31,7 @@ const HERO_SLIDES = [
     objectPosition: "center",
   },
   {
-    image: "/images/vestido-vermelho.jpg",
+    image: "/images/vestidoacessorio.png",
     alt: "Vestido vermelho com rosas",
     objectPosition: "center",
   },
@@ -123,53 +123,97 @@ export default function Home() {
       </div>
 
       {/* Header */}
-      <header className="bg-white border-b border-rose-light">
-        <div className="max-w-7xl mx-auto px-6 h-20 md:h-24 grid grid-cols-3 items-center">
-          <nav className="hidden md:flex gap-6 lg:gap-8 text-sm text-gray-600">
-            <Link href="/" className="text-rose font-medium">
-              Início
-            </Link>
-            <Link href="/orcamento" className="hover:text-rose transition">
-              Solicitar Orçamento
-            </Link>
-            {/*<Link href="/colecao" className="hover:text-rose transition">
-              Coleção
-            </Link>
-            <Link href="/novidades" className="hover:text-rose transition">
-              Novidades
-            </Link>
-            <Link href="/acessorios" className="hover:text-rose transition">
-              Acessórios
-            </Link>*/}
-          </nav>
+<header className="bg-white border-b border-rose-light">
 
-          <div className="text-center col-span-3 md:col-span-1 md:col-start-2">
-            <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-serif text-rose leading-tight">
-              Mila & Rose
-            </h1>
-            <p className="text-[10px] md:text-xs tracking-[3px] uppercase text-rose/80 flex items-center justify-center gap-1.5 mt-0.5">
-              Roupas Infantis
-              <Heart size={8} fill="currentColor" className="text-rose" />
-            </p>
-          </div>
+  {/* Mobile */}
+  <div className="md:hidden px-6 py-5">
 
-          {/*<div className="hidden md:flex gap-5 justify-end items-center col-start-3">
-            <button aria-label="Buscar" className="text-gray-600 hover:text-rose transition">
-              <Search size={20} strokeWidth={1.5} />
-            </button>
-            <button aria-label="Conta" className="text-gray-600 hover:text-rose transition">
-              <User size={20} strokeWidth={1.5} />
-            </button>
-            <button aria-label="Carrinho" className="relative text-gray-600 hover:text-rose transition">
-              <ShoppingBag size={20} strokeWidth={1.5} />
-              <span className="absolute -top-1.5 -right-2 bg-rose text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
-                0
-              </span>
-            </button>
-          </div>*/}
-        </div>
-      </header>
+    <div className="text-center">
+      <h1 className="text-3xl font-serif text-rose leading-tight">
+        Mila & Rose
+      </h1>
 
+      <p className="text-[10px] tracking-[3px] uppercase text-rose/80 flex items-center justify-center gap-1.5 mt-1">
+        Roupas Infantis
+        <Heart size={8} fill="currentColor" className="text-rose" />
+      </p>
+    </div>
+
+    <nav className="flex justify-center gap-6 mt-5 text-sm text-gray-600">
+      <Link href="/" className="text-rose font-medium">
+        Início
+      </Link>
+
+      <Link href="/orcamento" className="hover:text-rose transition">
+        Solicitar Orçamento
+      </Link>
+
+      {/*<Link href="/colecao" className="hover:text-rose transition">
+        Coleção
+      </Link>
+      <Link href="/novidades" className="hover:text-rose transition">
+        Novidades
+      </Link>
+      <Link href="/acessorios" className="hover:text-rose transition">
+        Acessórios
+      </Link>*/}
+    </nav>
+
+  </div>
+
+  {/* Desktop */}
+  <div className="hidden md:grid max-w-7xl mx-auto px-6 h-24 grid-cols-3 items-center">
+
+    <nav className="flex gap-6 lg:gap-8 text-sm text-gray-600">
+      <Link href="/" className="text-rose font-medium">
+        Início
+      </Link>
+
+      <Link href="/orcamento" className="hover:text-rose transition">
+        Solicitar Orçamento
+      </Link>
+
+      {/*<Link href="/colecao" className="hover:text-rose transition">
+        Coleção
+      </Link>
+      <Link href="/novidades" className="hover:text-rose transition">
+        Novidades
+      </Link>
+      <Link href="/acessorios" className="hover:text-rose transition">
+        Acessórios
+      </Link>*/}
+    </nav>
+
+    <div className="text-center">
+      <h1 className="text-4xl lg:text-[2.75rem] font-serif text-rose leading-tight">
+        Mila & Rose
+      </h1>
+
+      <p className="text-xs tracking-[3px] uppercase text-rose/80 flex items-center justify-center gap-1.5 mt-0.5">
+        Roupas Infantis
+        <Heart size={8} fill="currentColor" className="text-rose" />
+      </p>
+    </div>
+
+    {/*<div className="flex gap-5 justify-end items-center">
+      <button aria-label="Buscar" className="text-gray-600 hover:text-rose transition">
+        <Search size={20} strokeWidth={1.5} />
+      </button>
+
+      <button aria-label="Conta" className="text-gray-600 hover:text-rose transition">
+        <User size={20} strokeWidth={1.5} />
+      </button>
+
+      <button aria-label="Carrinho" className="relative text-gray-600 hover:text-rose transition">
+        <ShoppingBag size={20} strokeWidth={1.5} />
+        <span className="absolute -top-1.5 -right-2 bg-rose text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
+          0
+        </span>
+      </button>
+    </div>*/}
+
+  </div>
+</header>
       {/* Hero Carousel */}
       <section className="relative h-[480px] md:h-[540px] lg:h-[500px] overflow-hidden">
         {HERO_SLIDES.map((slide, index) => (
@@ -295,7 +339,7 @@ export default function Home() {
       </section>
 
       {/* Collection Grid */}
-      <section className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+      <section className="max-w-7xl mx-auto px-6 py-5 md:py-20">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-10">
           <div>
             <span className="uppercase text-rose tracking-[3px] text-xs font-medium">
@@ -341,7 +385,7 @@ export default function Home() {
       </section>
 
       {/* Instagram Section */}
-      <section className="bg-rose-pale py-16 md:py-20">
+      <section className="bg-rose-pale py-5 md:py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-[35%_65%] gap-10 lg:gap-12 items-center">
             <div>
