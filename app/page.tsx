@@ -101,26 +101,30 @@ export default function Home() {
   return (
     <main className="bg-white min-h-screen">
       {/* Top Announcement Bar */}
-      <div className="bg-rose text-white text-xs md:text-sm">
-        <div className="max-w-7xl mx-auto px-6 py-2.5 flex flex-wrap justify-center md:justify-between items-center gap-4 md:gap-0">
-          <span className="flex items-center gap-2">
-            <Truck size={14} strokeWidth={1.5} />
-            Envio para todo o Brasil
-          </span>
-          <span className="flex items-center gap-2">
-            <CreditCard size={14} strokeWidth={1.5} />
-            Parcele em até 6x sem juros
-          </span>
-          {/*<span className="flex items-center gap-2">
-            <Tag size={14} strokeWidth={1.5} />
-            5% OFF na primeira compra
-          </span>*/}
-          <span className="flex items-center gap-2">
-            <Tag size={14} strokeWidth={1.5} />
-            Feito sob medida para todas as ocasiões
-          </span>
+      <section
+        className="relative bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/vestido-rosa.png')" }}
+      >
+        <div className="absolute inset-0 bg-rose/70"></div>
+
+        <div className="relative max-w-7xl mx-auto px-6 py-5">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-center text-white">
+
+            <span className="font-semibold">
+              ✓ Envio para todo o Brasil
+            </span>
+
+            <span className="font-semibold">
+              ✓ Parcele em até 6x sem juros
+            </span>
+
+            <span className="font-semibold">
+              ✓ Feito sob medida para todas as ocasiões
+            </span>
+
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Header */}
 <header className="bg-white border-b border-rose-light">
@@ -474,124 +478,141 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-rose text-white">
-        <div className="max-w-7xl mx-auto px-6 py-14">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            <div>
-              <h3 className="text-3xl font-serif">Mila & Rose</h3>
-              <p className="text-[10px] tracking-[3px] uppercase mt-1 opacity-80 flex items-center gap-1.5">
-                Roupas Infantis
-                <Heart size={8} fill="currentColor" />
-              </p>
-            </div>
-            <div>
-              <li>
-                  <Link href="/sobre" className="hover:opacity-100 opacity-90 transition">
-                    Sobre Nós
-                  </Link>
-                </li>
-          </div>
-            {/*
-            <div>
-              <h4 className="text-xs tracking-[2px] uppercase font-semibold mb-4">
-                Institucional
-              </h4>
-              <ul className="space-y-2.5 text-sm opacity-90">
-                <li>
-                  <Link href="#" className="hover:opacity-100 opacity-90 transition">
-                    Sobre Nós
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:opacity-100 opacity-90 transition">
-                    Contato
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:opacity-100 opacity-90 transition">
-                    Política de Trocas
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-xs tracking-[2px] uppercase font-semibold mb-4">
-                Ajuda
-              </h4>
-              <ul className="space-y-2.5 text-sm opacity-90">
-                <li>
-                  <Link href="#" className="hover:opacity-100 opacity-90 transition">
-                    Como Comprar
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:opacity-100 opacity-90 transition">
-                    Pagamentos
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:opacity-100 opacity-90 transition">
-                    Entrega
-                  </Link>
-                </li>
-              </ul>
-            </div>*/}
+      <footer
+  className="relative text-white overflow-hidden"
+  style={{
+    backgroundImage: "url('/images/vestido-rosa.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-rose/10"></div>
 
-            <div>
-              <h4 className="text-xs tracking-[2px] uppercase font-semibold mb-2">
-                Newsletter
-              </h4>
-              <p className="text-sm opacity-90 mb-4">
-                Receba novidades e promoções exclusivas.
-              </p>
-              <div className="relative">
-                <input
-                  type="email"
-                  placeholder="Seu melhor e-mail"
-                  className="w-full bg-white text-gray-800 text-sm rounded-full pl-5 pr-12 py-3 outline-none placeholder:text-gray-400"
-                />
-                <button
-                  aria-label="Cadastrar newsletter"
-                  className="absolute right-1.5 top-1/2 -translate-y-1/2 bg-rose hover:bg-rose-dark transition text-white w-9 h-9 rounded-full flex items-center justify-center"
-                >
-                  <ArrowRight size={16} />
-                </button>
-              </div>
-            </div>
-          </div>
-          
+  {/* Efeito gradiente */}
+  <div className="absolute inset-0 bg-gradient-to-b from-rose/70 via-rose/80 to-rose"></div>
 
-          <div className="border-t border-white/20 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-xs opacity-80">
-              © 2026 Mila & Rose. Todos os direitos reservados.
-            </p>
-            {/*<div className="flex gap-5">
-              <a
-                href="https://instagram.com/milaerose.oficial"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="opacity-90 hover:opacity-100 transition"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
-              <a href="#" aria-label="Facebook" className="opacity-90 hover:opacity-100 transition">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg>
-              </a>
-              <a href="#" aria-label="Pinterest" className="opacity-90 hover:opacity-100 transition">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
-                </svg>
-              </a>
-            </div>*/}
-          </div>
+  <div className="relative max-w-7xl mx-auto px-6 py-14">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <div>
+        <h3 className="text-4xl font-serif drop-shadow-md">
+          Mila & Rose
+        </h3>
+
+        <p className="text-[10px] tracking-[3px] uppercase mt-2 opacity-90 flex items-center gap-1.5">
+          Roupas Infantis
+          <Heart size={8} fill="currentColor" />
+        </p>
+
+        <p className="mt-5 text-sm text-white/90 leading-relaxed max-w-xs">
+          Vestidos desenvolvidos com carinho, elegância e atenção aos detalhes
+          para tornar cada momento inesquecível.
+        </p>
+      </div>
+
+      <div>
+        <h4 className="text-xs tracking-[2px] uppercase font-semibold mb-4">
+          Institucional
+        </h4>
+
+        <ul className="space-y-3 text-sm">
+          <li>
+            <Link
+              href="/sobre"
+              className="hover:text-white transition"
+            >
+              Sobre Nós
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      {/*
+      <div>
+        <h4 className="text-xs tracking-[2px] uppercase font-semibold mb-4">
+          Institucional
+        </h4>
+        <ul className="space-y-2.5 text-sm opacity-90">
+          <li>
+            <Link href="#" className="hover:opacity-100 opacity-90 transition">
+              Sobre Nós
+            </Link>
+          </li>
+          <li>
+            <Link href="#" className="hover:opacity-100 opacity-90 transition">
+              Contato
+            </Link>
+          </li>
+          <li>
+            <Link href="#" className="hover:opacity-100 opacity-90 transition">
+              Política de Trocas
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="text-xs tracking-[2px] uppercase font-semibold mb-4">
+          Ajuda
+        </h4>
+        <ul className="space-y-2.5 text-sm opacity-90">
+          <li>
+            <Link href="#" className="hover:opacity-100 opacity-90 transition">
+              Como Comprar
+            </Link>
+          </li>
+          <li>
+            <Link href="#" className="hover:opacity-100 opacity-90 transition">
+              Pagamentos
+            </Link>
+          </li>
+          <li>
+            <Link href="#" className="hover:opacity-100 opacity-90 transition">
+              Entrega
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="text-xs tracking-[2px] uppercase font-semibold mb-2">
+          Newsletter
+        </h4>
+
+        <p className="text-sm text-white/90 mb-4">
+          Receba novidades e promoções exclusivas.
+        </p>
+
+        <div className="relative">
+          <input
+            type="email"
+            placeholder="Seu melhor e-mail"
+            className="w-full bg-white/95 backdrop-blur text-gray-800 text-sm rounded-full pl-5 pr-12 py-3 outline-none placeholder:text-gray-400"
+          />
+
+          <button
+            aria-label="Cadastrar newsletter"
+            className="absolute right-1.5 top-1/2 -translate-y-1/2 bg-rose hover:bg-rose-dark transition text-white w-9 h-9 rounded-full flex items-center justify-center"
+          >
+            <ArrowRight size={16} />
+          </button>
         </div>
-      </footer>
+      </div>
+
+    </div>
+
+    <div className="border-t border-white/20 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p className="text-xs text-white/80">
+        © 2026 Mila & Rose. Todos os direitos reservados.
+      </p>
+
+      {/*<div className="flex gap-5">
+        ...
+      </div>*/}
+    </div>
+  </div>
+</footer>
     </main>
   );
 }
