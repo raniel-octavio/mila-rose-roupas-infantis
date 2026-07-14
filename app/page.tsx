@@ -77,7 +77,7 @@ const INSTAGRAM_IMAGES = [
     objectPosition: "10% 5%",
   },
   {
-    src: "/images/modelovermelho.png",
+    src: "/images/vestido-vermelho.png",
     alt: "Vestido vermelho",
     objectPosition: "center",
   },
